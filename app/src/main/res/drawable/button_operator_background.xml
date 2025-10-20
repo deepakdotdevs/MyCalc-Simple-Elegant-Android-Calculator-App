@@ -4,7 +4,11 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="24dp"/>
+<<<<<<< HEAD
             <solid android:color="@color/operatorcolor"/>
+=======
+            <solid android:color="@color/operatorColor"/>
+>>>>>>> 2fb6ec7 (2nd Commit)
         </shape>
     </item>
 </ripple>
