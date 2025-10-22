@@ -66,7 +66,7 @@ MyCalc/
 Below is the interface preview of **MyCalc**:
 
 <p align="center">
-  <img src="screenshot/mycalc_ui.png" alt="MyCalc App Screenshot" width="320" />
+  <img src="screenshot/MyCalc_ScreenShot.png" alt="MyCalc App Screenshot" width="320" />
 </p>
 
 ---
@@ -79,3 +79,9 @@ Below is the interface preview of **MyCalc**:
 2. Open the project in Android Studio
 3. Run the app on an emulator or a physical Android device
 4. Start calculating 🧮🚀
+5. ## 👨‍💻 Author
+
+**Deepak**  
+🎓 B.Tech CSE, K.R. Mangalam University  
+💡 Android Developer | Kotlin Enthusiast | Creative Thinker
+
