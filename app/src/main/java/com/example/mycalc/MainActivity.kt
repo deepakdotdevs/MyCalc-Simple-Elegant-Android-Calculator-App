@@ -3,6 +3,7 @@ package com.example.mycalc
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -53,27 +54,82 @@ class MainActivity : AppCompatActivity() {
         val btnBackSpace: Button = findViewById<Button>(R.id.btnBackspace)
 
         // Let's set what is enter on screen when the user click on the button from 0 to 9 :
-        btn0.setOnClickListener {}
-        btn1.setOnClickListener {}
-        btn2.setOnClickListener {}
-        btn3.setOnClickListener {}
-        btn4.setOnClickListener {}
-        btn5.setOnClickListener {}
-        btn6.setOnClickListener {}
-        btn7.setOnClickListener {}
-        btn8.setOnClickListener {}
-        btn9.setOnClickListener {}
+        btn0.setOnClickListener { appendNumber("0") }
+        btn1.setOnClickListener { appendNumber("1") }
+        btn2.setOnClickListener { appendNumber("2") }
+        btn3.setOnClickListener { appendNumber("3") }
+        btn4.setOnClickListener { appendNumber("4") }
+        btn5.setOnClickListener { appendNumber("5") }
+        btn6.setOnClickListener { appendNumber("6") }
+        btn7.setOnClickListener { appendNumber("7") }
+        btn8.setOnClickListener { appendNumber("8") }
+        btn9.setOnClickListener { appendNumber("9") }
+        btnDot.setOnClickListener { appendNumber(".") }
 
+        btnAdd.setOnClickListener { setOperation("+") }
+        btnMinus.setOnClickListener { setOperation("-") }
+        btnMultiply.setOnClickListener { setOperation("*") }
+        btnDivide.setOnClickListener { setOperation("/") }
+
+        btnEqual.setOnClickListener { calculateResult() }
+        btnClear.setOnClickListener { clearCalculator() }
+
+        btnBackSpace.setOnClickListener { deleteNum() }
+        }
+
+    // setOpeation function :
+    fun setOperation(operator: String) {
+        firsNumber = resultTextView.text.toString().toDouble()
+        operation = operator
+        isNewOperation = true
+        previousCalculationTextView.text = "$firsNumber $operation"
+        resultTextView.text = "0.0"
     }
+
         // Here is the append Function :
-        private fun appendNumber(number : String) {
-            if(isNewOperation) {
+        private fun appendNumber(number: String) {
+            if (isNewOperation) {
                 resultTextView.text = number
-                isNewOperation=false
-            }
-            else {
+                isNewOperation = false
+            } else {
                 resultTextView.text = "${resultTextView.text}$number"
             }
         }
 
+    // a Function of the calculation for the Calculator :
+    private fun calculateResult() {
+        try {
+            val secondNumber :Double = resultTextView.text.toString().toDouble()
+            val result: Double = when(operation) {
+                "+" -> firsNumber+secondNumber
+                "-" -> firsNumber-secondNumber
+                "/"-> firsNumber/secondNumber
+                "*" -> firsNumber*secondNumber
+                else -> secondNumber
+            }
+            previousCalculationTextView.text = "$firsNumber $operation $secondNumber"
+            resultTextView.text = result.toString()
+            isNewOperation = true
+        } catch (e: Exception) {
+            resultTextView.text = "Error"
+        }
+    }
+
+    // Clear Function :
+    private fun clearCalculator() {
+        resultTextView.text = "0"
+        previousCalculationTextView.text = ""
+        operation = ""
+        firsNumber = 0.0
+        isNewOperation = true;
+    }
+
+    // Delete Function :
+    private fun deleteNum() {
+        if(resultTextView.text.isNotEmpty() && resultTextView.text != "0.0" && resultTextView.text != "Error") {
+            resultTextView.text = resultTextView.text.drop(1)
+        } else {
+            Toast.makeText(this, "Invalid Operator", Toast.LENGTH_SHORT).show()
+        }
+    }
 }
