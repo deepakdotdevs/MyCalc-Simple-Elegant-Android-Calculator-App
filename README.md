@@ -29,3 +29,34 @@ It performs all the essential arithmetic operations — with a clean interface, 
 
 ## 📁 Project Structure
 
+MyCalc/
+
+│
+
+├── app/
+
+│ ├── src/
+
+│ │ └── main/
+
+│ │ ├── java/com/example/mycalc/
+
+│ │ │ └── MainActivity.kt
+
+│ │ ├── res/layout/
+
+│ │ │ └── activity_main.xml
+
+│ │ └── AndroidManifest.xml
+
+│ └── build.gradle
+
+│
+
+├── screenshot/
+
+│ └── mycalc_ui.png
+
+│
+
+└── README.md
