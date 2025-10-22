@@ -60,3 +60,9 @@ MyCalc/
 │
 
 └── README.md
+
+App Screenshot
+
+Below is the interface preview of MyCalc:
+
+<p align="center"> <img src="screenshot/MyCalc_ScreenShot.png" alt="MyCalc App Screenshot" width="320" /> </p>
