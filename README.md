@@ -61,8 +61,21 @@ MyCalc/
 
 └── README.md
 
-App Screenshot
+## 🖼️ App Screenshot
 
-Below is the interface preview of MyCalc:
+Below is the interface preview of **MyCalc**:
 
-<p align="center"> <img src="screenshot/MyCalc_ScreenShot.png" alt="MyCalc App Screenshot" width="320" /> </p>
+<p align="center">
+  <img src="screenshot/mycalc_ui.png" alt="MyCalc App Screenshot" width="320" />
+</p>
+
+---
+
+## ⚙️ Installation & Usage
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/yourusername/MyCalc.git
+2. Open the project in Android Studio
+3. Run the app on an emulator or a physical Android device
+4. Start calculating 🧮🚀
