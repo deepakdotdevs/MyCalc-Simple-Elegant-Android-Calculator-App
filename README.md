@@ -15,6 +15,16 @@ It performs all the essential arithmetic operations — with a clean interface, 
 
 ---
 
+## 📄 Project Documentation
+
+<p align="center">
+  <a href="docs/MyCalc_Documentation.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/View%20PDF-FF5733?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="View PDF" />
+  </a>
+</p>
+
+---
+
 ## 🧩 Tech Stack
 
 | Category | Technology Used |
