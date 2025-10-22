@@ -85,7 +85,7 @@ Below is the interface preview of **MyCalc**:
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/yourusername/MyCalc.git
+   git clone https://github.com/deepakdotdevs/MyCalc-Simple-Elegant-Android-Calculator-App
 2. Open the project in Android Studio
 3. Run the app on an emulator or a physical Android device
 4. Start calculating 🧮🚀
